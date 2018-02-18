@@ -1,0 +1,807 @@
+➜  stanford-postagger-full-2017-06-09 time java -mx1g -classpath stanford-postagger.jar edu.stanford.nlp.tagger.maxent.MaxentTagger -props models/english-brown-80.props
+## tagger training invoked at Fri Feb 09 08:40:55 IST 2018 with arguments:
+                   model = models/english-brown-80.model
+                    arch = left3words
+            wordFunction = 
+               trainFile = models/english-brown-80-oneline.train
+         closedClassTags = 
+ closedClassTagThreshold = 40
+ curWordMinFeatureThresh = 2
+                   debug = false
+             debugPrefix = 
+            tagSeparator = _
+                encoding = UTF-8
+              iterations = 100
+                    lang = 
+    learnClosedClassTags = false
+        minFeatureThresh = 5
+           openClassTags = 
+rareWordMinFeatureThresh = 10
+          rareWordThresh = 5
+                  search = qn
+                    sgml = false
+            sigmaSquared = 0.5
+                   regL1 = 1.0
+               tagInside = 
+                tokenize = false
+        tokenizerFactory = 
+        tokenizerOptions = 
+                 verbose = false
+          verboseResults = true
+    veryCommonWordThresh = 250
+                xmlInput = 
+              outputFile = 
+            outputFormat = slashTags
+     outputFormatOptions = 
+                nthreads = 1
+warning: no language set, no open-class tags specified, and no closed-class tags specified; assuming ALL tags are open class tags
+TaggerExperiments: adding word/tags
+Loading tagged words from models/english-brown-80-oneline.train
+Read 910832 words from models/english-brown-80-oneline.train [done].
+Read 45872 sentences, min 1 words, max 180 words.
+Featurizing tagged data tokens...
+Featurized 956704 data tokens [done].
+xSize [num Phi templates] = 755101; ySize [num classes] = 13
+Hashing histories ...
+Hashed 755101 histories.
+Hashing populated histories ...
+Hashed populated histories.
+TaggerExperiments.getFeaturesNew: initializing fnumArr.
+  length of sTemplates keys: 264576
+getFeaturesNew adding features ...
+  total feats: 264576, populated: 144046
+  Max features per x,y pair: 5
+  Max non-zero y values for an x: 13
+  Number of non-zero feature x,y pairs: 9793264
+  Number of zero feature x,y pairs: 23049
+end getFeaturesNew.
+Samples from models/english-brown-80-oneline.train
+Number of features: 144046
+Tag set: [PRON, ADJ, NUM, ADP, ., DET, ADV, PRT, .$$., VERB, CONJ, X, NOUN]
+ pcond initialized 
+ zlambda initialized 
+ ftildeArr initialized 
+QNMinimizer called on double function of 144046 variables, using M = 10.
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 0: neg. log cond. likelihood = 2453897.3100529388 [1 calls to valueAt]
+               An explanation of the output:
+Iter           The number of iterations
+evals          The number of function evaluations
+SCALING        <D> Diagonal scaling was used; <I> Scaled Identity
+LINESEARCH     [## M steplength]  Minpack linesearch
+                   1-Function value was too high
+                   2-Value ok, gradient positive, positive curvature
+                   3-Value ok, gradient negative, positive curvature
+                   4-Value ok, gradient negative, negative curvature
+               [.. B]  Backtracking
+VALUE          The current function value
+TIME           Total elapsed time
+|GNORM|        The current norm of the gradient
+{RELNORM}      The ratio of the current to initial gradient norms
+AVEIMPROVE     The average improvement / current value
+EVALSCORE      The last available eval score
+ 
+Iter ## evals ## <SCALING> [LINESEARCH] VALUE TIME |GNORM| {RELNORM} AVEIMPROVE EVALSCORE
+
+lambda 11 too big: -1276.9076923098028
+lambda 405 too big: -249.01538461531368
+lambda 417 too big: -346.41538461509094
+lambda 734 too big: 4511.976923083552
+lambda 865 too big: 1576.8461538467527
+lambda 1026 too big: -347.22307692278764
+lambda 1029 too big: -365.6230769227498
+lambda 1064 too big: 206.59230769246193
+lambda 1081 too big: 341.1923076927037
+lambda 1775 too big: -280.0615384614238
+lambda 2305 too big: 336.5846153851942
+lambda 2907 too big: -1447.8076923114577
+lambda 3129 too big: 391.2769230769936
+lambda 3563 too big: -1232.3076923093552
+lambda 3586 too big: 598.3384615387157
+lambda 3746 too big: 713.9999999999884
+lambda 4956 too big: 242.83846153882723
+lambda 5036 too big: 2607.0307692337224
+lambda 5109 too big: 416.0538461539302
+lambda 5627 too big: 436.25384615397337
+lambda 6217 too big: 5954.384615398296
+lambda 6363 too big: 1358.3846153840748
+lambda 6517 too big: -289.3692307677736
+lambda 6521 too big: 1359.0307692384536
+lambda 6522 too big: 402.6307692272126
+lambda 7286 too big: 625.7076923077581
+lambda 7833 too big: -400.8153846149853
+lambda 7982 too big: 714.0461538462068
+lambda 8488 too big: 353.8000000000836
+lambda 8597 too big: 765.1384615385234
+lambda 8745 too big: 406.0076923077788
+lambda 8758 too big: 354.36923076930674
+lambda 9113 too big: 647.2615384615639
+lambda 9131 too big: 679.5615384615893
+lambda 9239 too big: -354.61538461507854
+lambda 9361 too big: 1532.1307692421447
+lambda 9580 too big: 298.2230769232563
+lambda 10107 too big: 251.5307692308682
+lambda 10120 too big: -296.9615384614001
+lambda 11046 too big: 522.7615384615607
+lambda 11239 too big: 227.20769230780894
+lambda 11531 too big: 672.9846153848214
+lambda 11782 too big: -1117.5692307702532
+lambda 12260 too big: 428.9384615389071
+lambda 12278 too big: 456.4461538462165
+lambda 13263 too big: -217.0692307692335
+lambda 13364 too big: 261.3538461539302
+lambda 13433 too big: 969.0307692296433
+lambda 13903 too big: 386.76923076975345
+lambda 14239 too big: 302.3000000003145
+lambda 14740 too big: -269.48461538448834
+lambda 16426 too big: -232.73076923073268
+lambda 17144 too big: 466.6461538464238
+lambda 17278 too big: -315.023076922859
+lambda 17281 too big: -375.72307692272915
+lambda 17284 too big: 788.5769230751704
+lambda 17824 too big: 246.0846153851931
+lambda 18534 too big: 247.2846153851923
+lambda 18732 too big: 4228.984615391214
+lambda 18754 too big: 3652.9846153878593
+lambda 18802 too big: 222.3307692308033
+lambda 18860 too big: 415.2000000000337
+lambda 18882 too big: -1599.8076923126125
+lambda 18902 too big: 375.6846153846325
+lambda 18912 too big: 4435.992307716282
+lambda 19363 too big: 503.3538461538867
+lambda 19382 too big: 276.0000000000514
+lambda 19388 too big: -375.72307692271283
+lambda 20677 too big: -327.8230769228296
+lambda 20790 too big: 1805.5923077125244
+lambda 21366 too big: -269.6153846152642
+lambda 21938 too big: -238.51538461534187
+lambda 22153 too big: -350.5615384612936
+lambda 22321 too big: -374.4230769227314
+lambda 23276 too big: -211.66923076924724
+lambda 25513 too big: -717.7153846141978
+lambda 25847 too big: 221.19230769241517
+lambda 26354 too big: 3616.538461543698
+lambda 26760 too big: 428.9384615389071
+lambda 26835 too big: 209.4461538461792
+lambda 27492 too big: 251.82307692314635
+lambda 27639 too big: 252.91538461544138
+lambda 28143 too big: -1001.2692307693277
+lambda 28214 too big: -826.0153846140173
+lambda 28796 too big: 904.8923076911532
+lambda 28875 too big: 252.9153846154311
+lambda 29468 too big: 647.2615384616047
+lambda 29588 too big: 2054.2846153870996
+lambda 29621 too big: 242.83846153882723
+lambda 29635 too big: -344.061538461294
+lambda 29810 too big: 1200.9307692353002
+lambda 30640 too big: 218.04615384623662
+lambda 30933 too big: 3038.284615389812
+lambda 31135 too big: 245.71538461544088
+lambda 31605 too big: 475.10769230776197
+lambda 31613 too big: -215.2692307692375
+lambda 31618 too big: -201.46923076926493
+lambda 31731 too big: -352.5615384613302
+lambda 32724 too big: -203.86153846157768
+lambda 32727 too big: 211.23846153883017
+lambda 33295 too big: 282.4538461539017
+lambda 34219 too big: 221.16923076975647
+lambda 34871 too big: 1006.7999999991446
+lambda 35060 too big: 212.35384615402924
+lambda 36045 too big: 1001.5999999990572
+lambda 36146 too big: -1031.90769230736
+lambda 36152 too big: -1352.9076923105993
+lambda 36158 too big: 3581.6923077160136
+lambda 36916 too big: -297.17692307674236
+lambda 36939 too big: -340.93846153817276
+lambda 37085 too big: 314.0076923079648
+lambda 37101 too big: 258.3846153846729
+lambda 37357 too big: -346.4769230766335
+lambda 37560 too big: -373.52307692273814
+lambda 38417 too big: 1910.053846158021
+lambda 38520 too big: -316.0846153843865
+lambda 39122 too big: -200.05384615388147
+lambda 39443 too big: 433.2769230771628
+lambda 39597 too big: 565.0769230772211
+lambda 39626 too big: -348.84615384585754
+lambda 39738 too big: 644.3461538462643
+lambda 40128 too big: -270.94615384604447
+lambda 42565 too big: 4234.33846153857
+lambda 44891 too big: -203.8230769231138
+lambda 44900 too big: 236.74615384623013
+lambda 44988 too big: 499.961538461614
+lambda 45091 too big: -225.36153846151637
+lambda 45098 too big: -343.36153846126075
+lambda 46444 too big: -460.56153846113915
+lambda 47140 too big: 4344.9461538593005
+lambda 47184 too big: -460.50769230707976
+lambda 48151 too big: -218.71538461540374
+lambda 48267 too big: -371.50769230731885
+lambda 48322 too big: -709.0538461526974
+lambda 49920 too big: -290.4153846152091
+lambda 50005 too big: -398.0153846149915
+lambda 50031 too big: -553.0538461528922
+lambda 50082 too big: -462.3076923070754
+lambda 51866 too big: 472.8692307692979
+lambda 52682 too big: -516.4769230761971
+lambda 52987 too big: -235.22307692303335
+lambda 53544 too big: 592.7769230771277
+lambda 53688 too big: -220.3230769230862
+lambda 53694 too big: 2610.276923080601
+lambda 53697 too big: -360.82307692276385
+lambda 53796 too big: -284.1846153844529
+lambda 54106 too big: 1290.492307691446
+lambda 54244 too big: -320.93846153822085
+lambda 54264 too big: -292.2769230767534
+lambda 54998 too big: -283.5769230767698
+lambda 55010 too big: -315.53846153823423
+lambda 55529 too big: -339.9230769228036
+lambda 55665 too big: -221.85384615383728
+lambda 55972 too big: 308.5846153846879
+lambda 56864 too big: -368.44615384581545
+lambda 56888 too big: -395.746153845763
+lambda 57161 too big: -367.8230769227498
+lambda 57796 too big: -211.27692307695122
+lambda 57812 too big: -230.03846153844597
+lambda 58068 too big: 559.9461538466215
+lambda 58378 too big: -263.43846153835574
+lambda 58400 too big: -241.57692307686932
+lambda 58486 too big: -310.52307692284415
+lambda 58785 too big: 321.4230769241363
+lambda 58797 too big: -301.9230769228852
+lambda 58958 too big: 220.4769230774979
+lambda 58961 too big: 284.97692307749713
+lambda 61117 too big: 254.39230769244634
+lambda 61203 too big: -820.0153846139601
+lambda 61355 too big: 246.73846153896258
+lambda 62503 too big: -431.50769230715554
+lambda 62551 too big: 311.4307692312646
+lambda 62564 too big: -693.5538461527359
+lambda 62567 too big: -640.3538461528276
+lambda 62687 too big: 297.9846153853789
+lambda 62689 too big: 255.18461538538128
+lambda 63100 too big: 418.1461538462252
+lambda 63936 too big: -352.6615384613301
+lambda 64035 too big: 316.969230769498
+lambda 64075 too big: 321.33846153895456
+lambda 65044 too big: -218.56923076923164
+lambda 65048 too big: 689.4307692305139
+lambda 65083 too big: -495.20769230699153
+lambda 65156 too big: -769.4538461525398
+lambda 65176 too big: -869.0538461528821
+lambda 65188 too big: -347.9153846150682
+lambda 65210 too big: 458.984615385414
+lambda 65258 too big: 400.9846153849941
+lambda 66574 too big: -399.4615384611865
+lambda 66735 too big: 800.6384615370864
+lambda 66764 too big: -212.86153846155477
+lambda 67177 too big: 419.95384615422563
+lambda 67214 too big: 232.94615384621648
+lambda 67733 too big: -399.2538461530134
+lambda 67840 too big: -380.407692307294
+lambda 67957 too big: 720.2846153832412
+lambda 68185 too big: -215.0692307692367
+lambda 68340 too big: -399.3615384611869
+lambda 68595 too big: -279.6846153844637
+lambda 69041 too big: -262.0230769229678
+lambda 70397 too big: -224.62307692307147
+lambda 70761 too big: -343.74615384586895
+lambda 70774 too big: -341.94615384587274
+lambda 70837 too big: 705.5769230763239
+lambda 71380 too big: 651.6153846156917
+lambda 72442 too big: 288.46153846160416
+lambda 73036 too big: -349.5615384613328
+lambda 73081 too big: 1715.584615393841
+lambda 73083 too big: -729.8153846141673
+lambda 73087 too big: -643.2153846143921
+lambda 73285 too big: -888.5615384613452
+lambda 73310 too big: 402.4384615392116
+lambda 73909 too big: 260.03076922865006
+lambda 74101 too big: -203.86153846157768
+lambda 74107 too big: 211.23846153883017
+lambda 74372 too big: 267.69230769243217
+lambda 74632 too big: -280.0615384614238
+lambda 74788 too big: 342.71538461546976
+lambda 74966 too big: -204.26923076926465
+lambda 75034 too big: -367.3153846150515
+lambda 75627 too big: 4167.138461541937
+lambda 75637 too big: -352.6615384613301
+lambda 76244 too big: -393.5153846149991
+lambda 76370 too big: 598.3384615387157
+lambda 76630 too big: -266.2153846152707
+lambda 76682 too big: -354.31538461507944
+lambda 76708 too big: -851.5538461527184
+lambda 76813 too big: -247.80769230755496
+lambda 77702 too big: 237.24615384624536
+lambda 78372 too big: 479.2692307697298
+lambda 79626 too big: -230.42307692304635
+lambda 80945 too big: -1550.0076923122106
+lambda 81389 too big: 224.07692307704284
+lambda 81982 too big: 326.5615384618024
+lambda 82974 too big: 208.90769230777875
+lambda 83167 too big: 418.5769230769674
+lambda 83868 too big: -1182.30769230888
+lambda 84417 too big: 828.1461538452576
+lambda 84548 too big: 3019.076923081744
+lambda 84593 too big: 320.76923076929086
+lambda 85045 too big: 428.9384615389071
+lambda 85100 too big: 250.8846153851929
+lambda 86022 too big: -391.5461538457706
+lambda 86789 too big: 291.3153846154692
+lambda 88314 too big: -352.16153846133057
+lambda 88322 too big: -351.86153846133084
+lambda 88326 too big: -352.16153846133057
+lambda 89438 too big: 231.31538461551463
+lambda 89538 too big: -350.5615384612936
+lambda 90352 too big: -578.9615384607728
+lambda 90360 too big: -382.16153846119914
+lambda 90710 too big: -812.715384613967
+lambda 90731 too big: -690.6153846142666
+lambda 91237 too big: 509.7076923077423
+lambda 91479 too big: -349.76153846133246
+lambda 91738 too big: 276.384615384842
+lambda 91836 too big: 395.70000000011487
+lambda 92043 too big: -352.46153846133024
+lambda 92143 too big: 785.4307692299419
+lambda 92171 too big: 370.08461538470596
+lambda 92209 too big: 252.0000000000554
+lambda 92579 too big: -394.3153846149983
+lambda 92604 too big: -338.7153846151132
+lambda 93160 too big: -351.46153846133103
+lambda 93801 too big: -768.2615384606302
+lambda 94365 too big: -672.6615384606698
+lambda 94546 too big: -350.5615384612936
+lambda 94871 too big: 402.7923076926876
+lambda 95041 too big: -263.9692307679733
+lambda 95050 too big: 1848.684615387614
+lambda 95086 too big: 501.2230769231294
+lambda 95340 too big: 445.8307692308981
+lambda 95546 too big: 333.8538461540269
+lambda 96859 too big: 203.35384615387395
+lambda 98547 too big: 3652.984615384615
+lambda 98557 too big: -350.2153846150838
+lambda 99257 too big: -375.2230769227299
+lambda 100883 too big: -234.33076923072846
+lambda 101136 too big: -375.92307692272874
+lambda 101768 too big: 242.83846153882723
+lambda 101956 too big: 1016.8923076912065
+lambda 102060 too big: 328.4538461539564
+lambda 102105 too big: -314.5384615382371
+lambda 102137 too big: -303.97692307672884
+lambda 103116 too big: 1167.792307701882
+lambda 103766 too big: 234.83076923077954
+lambda 104422 too big: -280.0615384614238
+lambda 104868 too big: -804.8153846139833
+lambda 105010 too big: -203.86153846157768
+lambda 105011 too big: 211.23846153883017
+lambda 105406 too big: -734.4153846141543
+lambda 105480 too big: -1116.8692307702468
+lambda 106437 too big: 677.7615384615941
+lambda 106822 too big: 830.6846153824217
+lambda 106823 too big: -361.21538461506475
+lambda 106827 too big: -337.11538461511714
+lambda 107188 too big: 598.3384615387157
+lambda 108183 too big: -766.6153846140758
+lambda 109410 too big: -470.50769230705487
+lambda 110340 too big: 226.70769230773217
+lambda 110706 too big: -215.96923076923554
+lambda 110959 too big: -210.26923076924987
+lambda 112173 too big: 331.82307692320956
+lambda 113000 too big: 1056.1769230747898
+lambda 113008 too big: -321.82307692281665
+lambda 113118 too big: 4234.33846153857
+lambda 113465 too big: -312.0846153843943
+lambda 114987 too big: -217.38461538462514
+lambda 115519 too big: 272.47692307763276
+lambda 115826 too big: -398.5461538457576
+lambda 116212 too big: -241.5846153845595
+lambda 116228 too big: 303.13846153853405
+lambda 117354 too big: -221.85384615383728
+lambda 119001 too big: -408.7769230764676
+lambda 119633 too big: -317.10769230879686
+lambda 120007 too big: -289.62307692291506
+lambda 120053 too big: -373.3769230765644
+lambda 120588 too big: 2275.461538465793
+lambda 120605 too big: 2054.3230769268043
+lambda 120992 too big: -261.523076922969
+lambda 121595 too big: -223.22307692307564
+lambda 121599 too big: -290.3230769228948
+lambda 121601 too big: 891.4769230747336
+lambda 121816 too big: -508.07692307621846
+lambda 122264 too big: 234.7384615385671
+lambda 123587 too big: 371.76153846163356
+lambda 124235 too big: -497.30769230698564
+lambda 124272 too big: -214.76923076924177
+lambda 124324 too big: -874.0538461529281
+lambda 124404 too big: -347.51538461506925
+lambda 124704 too big: 208.98461538464895
+lambda 126282 too big: -203.52307692311373
+lambda 126381 too big: -902.6692307684718
+lambda 127107 too big: 537.1692307694642
+lambda 127170 too big: 309.4615384616495
+lambda 127406 too big: -240.26153846148364
+lambda 127533 too big: 2098.73076923313
+lambda 128009 too big: 227.73076923087376
+lambda 128120 too big: 318.269230769302
+lambda 128451 too big: 347.3846153850003
+lambda 128666 too big: 299.4307692310337
+lambda 129484 too big: 433.7615384617535
+lambda 129587 too big: 268.13076923089943
+lambda 130052 too big: 287.53076923126605
+lambda 130089 too big: 3690.59230770101
+lambda 130135 too big: 1991.346153855754
+lambda 130174 too big: -207.11538461543842
+lambda 130682 too big: -233.83076923072963
+lambda 131084 too big: -249.62307692300234
+lambda 131495 too big: 2569.015384619157
+lambda 133319 too big: 431.1153846156873
+lambda 133426 too big: -316.2846153843863
+lambda 133680 too big: -308.0769230767186
+lambda 133685 too big: 1626.3230769292068
+lambda 133687 too big: -442.9769230763781
+lambda 133901 too big: -314.1230769228352
+lambda 134311 too big: -250.62307692299976
+lambda 134984 too big: 224.1307692308174
+lambda 136160 too big: -519.976923076188
+lambda 136204 too big: 1024.123076919598
+lambda 136457 too big: -277.1846153844696
+lambda 136554 too big: -355.1230769227734
+lambda 137506 too big: 389.784615385215
+lambda 138029 too big: -375.92307692272874
+lambda 138785 too big: 501.2307692309117
+lambda 138902 too big: 1204.9538461517739
+lambda 138928 too big: 612.3230769216696
+lambda 141219 too big: 367.23076923091503
+lambda 141821 too big: 272.9307692310394
+lambda 142016 too big: 516.5307692308401
+lambda 143275 too big: 272.93846153857174
+lambda 143484 too big: 1302.6538461528728
+lambda 143764 too big: 511.47692307735264
+lambda 143980 too big: 1916.9384615402867
+lambda 11 too big: -272.01641423765193
+lambda 734 too big: 961.1750255181697
+lambda 865 too big: 335.9115456481722
+lambda 2907 too big: -308.42280874340776
+lambda 3563 too big: -262.515389106246
+lambda 5036 too big: 555.3691671881085
+lambda 6217 too big: 1268.447485927993
+lambda 6363 too big: 289.3732369674842
+lambda 6521 too big: 289.5108854878687
+lambda 9361 too big: 326.3859404265444
+lambda 11782 too big: -238.07294501183065
+lambda 13433 too big: 206.43017245435195
+lambda 18732 too big: 900.8898903757373
+lambda 18754 too big: 778.1860680513698
+lambda 18882 too big: -340.8029840790621
+lambda 18912 too big: 944.9882151998423
+lambda 20790 too big: 384.64075992102744
+lambda 26354 too big: 770.422036131796
+lambda 28143 too big: -213.29785033065986
+lambda 29588 too big: 437.6190528622779
+lambda 29810 too big: 255.83124258898602
+lambda 30933 too big: 647.2380826657626
+lambda 34871 too big: 214.47605610303586
+lambda 36045 too big: 213.3683132625954
+lambda 36146 too big: -219.8246842557168
+lambda 36152 too big: -288.20650190552584
+lambda 36158 too big: 762.9988481666313
+lambda 38417 too big: 406.89393709649903
+lambda 42565 too big: 902.0304066715937
+lambda 47140 too big: 925.5928834531078
+lambda 53694 too big: 556.0606871271062
+lambda 54106 too big: 274.9103104739789
+lambda 73081 too big: 365.4666490077744
+lambda 75627 too big: 887.7149607345516
+lambda 80945 too big: -330.194216107244
+lambda 83868 too big: -251.86401564054992
+lambda 84548 too big: 643.1463165820531
+lambda 95050 too big: 393.8206051718614
+lambda 98547 too big: 778.1860680506786
+lambda 101956 too big: 216.62599487019278
+lambda 103116 too big: 248.7718399916323
+lambda 105480 too big: -237.92382578331097
+lambda 113000 too big: 224.99469706824877
+lambda 113118 too big: 902.0304066715937
+lambda 120588 too big: 484.73581305592415
+lambda 120605 too big: 437.627246226747
+lambda 127533 too big: 447.087304536745
+lambda 130089 too big: 786.1975395715008
+lambda 130135 too big: 424.2114316798711
+lambda 131495 too big: 547.2708460087491
+lambda 133685 too big: 346.45148936176685
+lambda 136204 too big: 218.16634734009534
+lambda 138902 too big: 256.68826848334953
+lambda 143484 too big: 277.501052235356
+lambda 143980 too big: 408.3605492885688
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 1: neg. log cond. likelihood = 1510302.4872461357 [4 calls to valueAt]
+Iter 1 evals 1 <D> [11M 4.747E-5] 1.510E6 14.18s |1.077E5| {5.261E-1} 0.000E0 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 2: neg. log cond. likelihood = 1193983.702758254 [5 calls to valueAt]
+Iter 2 evals 4 <D> [M 1.000E0] 1.194E6 18.73s |5.669E4| {2.770E-1} 1.325E-1 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 3: neg. log cond. likelihood = 1031046.0218353219 [6 calls to valueAt]
+Iter 3 evals 5 <D> [M 1.000E0] 1.031E6 23.45s |4.438E4| {2.168E-1} 1.549E-1 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 4: neg. log cond. likelihood = 904037.4638887733 [7 calls to valueAt]
+Iter 4 evals 6 <D> [M 1.000E0] 9.040E5 28.93s |5.753E4| {2.811E-1} 1.677E-1 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 5: neg. log cond. likelihood = 780755.2375304084 [8 calls to valueAt]
+Iter 5 evals 7 <D> [M 1.000E0] 7.808E5 34.40s |3.519E4| {1.719E-1} 1.869E-1 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 6: neg. log cond. likelihood = 705418.2106428117 [9 calls to valueAt]
+Iter 6 evals 8 <D> [M 1.000E0] 7.054E5 39.83s |6.991E4| {3.416E-1} 1.902E-1 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 7: neg. log cond. likelihood = 635266.2614377147 [10 calls to valueAt]
+Iter 7 evals 9 <D> [M 1.000E0] 6.353E5 45.26s |2.878E4| {1.406E-1} 1.968E-1 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 8: neg. log cond. likelihood = 587323.7332697628 [11 calls to valueAt]
+Iter 8 evals 10 <D> [M 1.000E0] 5.873E5 50.69s |1.885E4| {9.208E-2} 1.964E-1 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 9: neg. log cond. likelihood = 515380.91801011836 [12 calls to valueAt]
+Iter 9 evals 11 <D> [M 1.000E0] 5.154E5 56.15s |1.688E4| {8.249E-2} 2.145E-1 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 10: neg. log cond. likelihood = 470638.94675583934 [13 calls to valueAt]
+Iter 10 evals 12 <D> [M 1.000E0] 4.706E5 61.57s |2.002E4| {9.784E-2} 2.209E-1 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 11: neg. log cond. likelihood = 436227.1657459652 [14 calls to valueAt]
+Iter 11 evals 13 <D> [M 1.000E0] 4.362E5 67.02s |1.390E4| {6.792E-2} 1.737E-1 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 12: neg. log cond. likelihood = 407325.7725182115 [15 calls to valueAt]
+Iter 12 evals 14 <D> [M 1.000E0] 4.073E5 72.19s |1.637E4| {7.998E-2} 1.531E-1 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 13: neg. log cond. likelihood = 388742.14751085953 [16 calls to valueAt]
+Iter 13 evals 15 <D> [M 1.000E0] 3.887E5 77.61s |1.137E4| {5.557E-2} 1.326E-1 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 14: neg. log cond. likelihood = 372533.0392095815 [17 calls to valueAt]
+Iter 14 evals 16 <D> [M 1.000E0] 3.725E5 83.03s |7.214E3| {3.525E-2} 1.096E-1 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 15: neg. log cond. likelihood = 354907.6503170971 [18 calls to valueAt]
+Iter 15 evals 17 <D> [M 1.000E0] 3.549E5 88.41s |8.100E3| {3.957E-2} 9.876E-2 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 16: neg. log cond. likelihood = 348382.6174475475 [19 calls to valueAt]
+Iter 16 evals 18 <D> [M 1.000E0] 3.484E5 93.79s |1.808E4| {8.834E-2} 8.235E-2 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 17: neg. log cond. likelihood = 326808.0293440854 [20 calls to valueAt]
+Iter 17 evals 19 <D> [M 1.000E0] 3.268E5 98.91s |8.514E3| {4.160E-2} 7.972E-2 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 18: neg. log cond. likelihood = 317310.16586833965 [21 calls to valueAt]
+Iter 18 evals 20 <D> [M 1.000E0] 3.173E5 104.30s |9.594E3| {4.687E-2} 6.242E-2 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 19: neg. log cond. likelihood = 306317.81786111696 [22 calls to valueAt]
+Iter 19 evals 21 <D> [M 1.000E0] 3.063E5 109.69s |1.082E4| {5.287E-2} 5.364E-2 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 20: neg. log cond. likelihood = 295850.90412142954 [24 calls to valueAt]
+Iter 20 evals 22 <D> [1M 4.485E-1] 2.959E5 119.43s |8.154E3| {3.984E-2} 4.745E-2 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 21: neg. log cond. likelihood = 289621.9746554139 [25 calls to valueAt]
+Iter 21 evals 24 <D> [M 1.000E0] 2.896E5 124.82s |4.152E3| {2.028E-2} 4.064E-2 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 22: neg. log cond. likelihood = 282125.27520909277 [26 calls to valueAt]
+Iter 22 evals 25 <D> [M 1.000E0] 2.821E5 130.03s |5.209E3| {2.545E-2} 3.779E-2 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 23: neg. log cond. likelihood = 274899.4795647235 [27 calls to valueAt]
+Iter 23 evals 26 <D> [M 1.000E0] 2.749E5 135.42s |1.058E4| {5.171E-2} 3.552E-2 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 24: neg. log cond. likelihood = 265307.91659645067 [28 calls to valueAt]
+Iter 24 evals 27 <D> [M 1.000E0] 2.653E5 140.84s |6.258E3| {3.057E-2} 3.377E-2 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 25: neg. log cond. likelihood = 260438.57515274463 [29 calls to valueAt]
+Iter 25 evals 28 <D> [M 1.000E0] 2.604E5 146.25s |1.084E4| {5.295E-2} 3.377E-2 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 26: neg. log cond. likelihood = 253053.70903090894 [30 calls to valueAt]
+Iter 26 evals 29 <D> [M 1.000E0] 2.531E5 151.63s |5.605E3| {2.738E-2} 2.915E-2 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 27: neg. log cond. likelihood = 248880.80837269643 [31 calls to valueAt]
+Iter 27 evals 30 <D> [M 1.000E0] 2.489E5 157.03s |4.192E3| {2.048E-2} 2.749E-2 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 28: neg. log cond. likelihood = 244598.2533364875 [32 calls to valueAt]
+Iter 28 evals 31 <D> [M 1.000E0] 2.446E5 162.40s |3.362E3| {1.642E-2} 2.523E-2 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 29: neg. log cond. likelihood = 240262.87016599413 [33 calls to valueAt]
+Iter 29 evals 32 <D> [M 1.000E0] 2.403E5 167.78s |6.278E3| {3.067E-2} 2.314E-2 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 30: neg. log cond. likelihood = 236012.463265156 [34 calls to valueAt]
+Checking model correctness; x size 755101 , ysize 13
+Constraint 2305 not satisfied emp 0.0072 exp 0.0083 diff 0.0011 lambda 2.2465
+Constraint 75201 not satisfied emp 0.0092 exp 0.0105 diff 0.0012 lambda 2.8585
+Constraint 120588 not satisfied emp 0.0275 exp 0.0265 diff 0.001 lambda 1.3213
+Iter 30 evals 33 <D> [M 1.000E0] 2.360E5 173.17s |3.934E3| {1.922E-2} 2.271E-2 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 31: neg. log cond. likelihood = 232868.47452309975 [35 calls to valueAt]
+Iter 31 evals 34 <D> [M 1.000E0] 2.329E5 179.61s |3.446E3| {1.684E-2} 2.115E-2 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 32: neg. log cond. likelihood = 229205.35301077034 [36 calls to valueAt]
+Iter 32 evals 35 <D> [M 1.000E0] 2.292E5 185.00s |3.134E3| {1.531E-2} 1.994E-2 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 33: neg. log cond. likelihood = 227806.33531565074 [37 calls to valueAt]
+Iter 33 evals 36 <D> [M 1.000E0] 2.278E5 190.39s |9.170E3| {4.480E-2} 1.646E-2 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 34: neg. log cond. likelihood = 222838.12210955846 [38 calls to valueAt]
+Iter 34 evals 37 <D> [M 1.000E0] 2.228E5 195.80s |2.803E3| {1.370E-2} 1.687E-2 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 35: neg. log cond. likelihood = 220897.38334233357 [39 calls to valueAt]
+Iter 35 evals 38 <D> [M 1.000E0] 2.209E5 201.21s |2.169E3| {1.060E-2} 1.456E-2 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 36: neg. log cond. likelihood = 217500.6135631916 [40 calls to valueAt]
+Iter 36 evals 39 <D> [M 1.000E0] 2.175E5 206.72s |2.232E3| {1.091E-2} 1.443E-2 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 37: neg. log cond. likelihood = 214152.83941167238 [42 calls to valueAt]
+Iter 37 evals 40 <D> [2M 4.954E-1] 2.142E5 216.80s |3.619E3| {1.768E-2} 1.422E-2 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 38: neg. log cond. likelihood = 211644.60225809913 [43 calls to valueAt]
+Iter 38 evals 42 <D> [M 1.000E0] 2.116E5 222.27s |2.805E3| {1.371E-2} 1.352E-2 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 39: neg. log cond. likelihood = 209114.68165439894 [44 calls to valueAt]
+Iter 39 evals 43 <D> [M 1.000E0] 2.091E5 227.79s |2.060E3| {1.006E-2} 1.286E-2 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 40: neg. log cond. likelihood = 205624.3065585242 [45 calls to valueAt]
+Iter 40 evals 44 <D> [M 1.000E0] 2.056E5 233.21s |3.665E3| {1.791E-2} 1.325E-2 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 41: neg. log cond. likelihood = 203989.70272236143 [46 calls to valueAt]
+Iter 41 evals 45 <D> [M 1.000E0] 2.040E5 238.66s |6.256E3| {3.056E-2} 1.236E-2 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 42: neg. log cond. likelihood = 200393.3522637285 [47 calls to valueAt]
+Iter 42 evals 46 <D> [M 1.000E0] 2.004E5 244.36s |2.489E3| {1.216E-2} 1.368E-2 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 43: neg. log cond. likelihood = 198768.4193214808 [48 calls to valueAt]
+Iter 43 evals 47 <D> [M 1.000E0] 1.988E5 249.94s |2.829E3| {1.382E-2} 1.211E-2 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 44: neg. log cond. likelihood = 196445.7616921506 [49 calls to valueAt]
+Iter 44 evals 48 <D> [M 1.000E0] 1.964E5 255.38s |1.922E3| {9.392E-3} 1.245E-2 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 45: neg. log cond. likelihood = 194439.79098585705 [50 calls to valueAt]
+Iter 45 evals 49 <D> [M 1.000E0] 1.944E5 261.15s |3.279E3| {1.602E-2} 1.186E-2 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 46: neg. log cond. likelihood = 192638.62248885274 [51 calls to valueAt]
+Iter 46 evals 50 <D> [M 1.000E0] 1.926E5 266.98s |2.757E3| {1.347E-2} 1.117E-2 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 47: neg. log cond. likelihood = 191345.99214650952 [52 calls to valueAt]
+Iter 47 evals 51 <D> [M 1.000E0] 1.913E5 272.80s |3.194E3| {1.561E-2} 1.061E-2 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 48: neg. log cond. likelihood = 189519.36250735403 [53 calls to valueAt]
+Iter 48 evals 52 <D> [M 1.000E0] 1.895E5 278.64s |1.464E3| {7.150E-3} 1.034E-2 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 49: neg. log cond. likelihood = 188740.52397191475 [54 calls to valueAt]
+Iter 49 evals 53 <D> [M 1.000E0] 1.887E5 284.48s |3.392E3| {1.657E-2} 8.945E-3 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 50: neg. log cond. likelihood = 187143.8628215257 [55 calls to valueAt]
+Iter 50 evals 54 <D> [M 1.000E0] 1.871E5 290.33s |1.481E3| {7.238E-3} 9.002E-3 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 51: neg. log cond. likelihood = 186345.99654335305 [56 calls to valueAt]
+Iter 51 evals 55 <D> [M 1.000E0] 1.863E5 296.18s |1.367E3| {6.681E-3} 7.538E-3 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 52: neg. log cond. likelihood = 185135.23269079038 [57 calls to valueAt]
+Iter 52 evals 56 <D> [M 1.000E0] 1.851E5 302.00s |1.374E3| {6.713E-3} 7.364E-3 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 53: neg. log cond. likelihood = 184706.42936956856 [58 calls to valueAt]
+Iter 53 evals 57 <D> [M 1.000E0] 1.847E5 307.85s |2.270E3| {1.109E-2} 6.356E-3 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 54: neg. log cond. likelihood = 183942.73838948488 [59 calls to valueAt]
+Iter 54 evals 58 <D> [M 1.000E0] 1.839E5 313.69s |1.009E3| {4.928E-3} 5.707E-3 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 55: neg. log cond. likelihood = 183582.81591046162 [60 calls to valueAt]
+Iter 55 evals 59 <D> [M 1.000E0] 1.836E5 319.51s |1.331E3| {6.502E-3} 4.933E-3 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 56: neg. log cond. likelihood = 183110.05295727972 [61 calls to valueAt]
+Iter 56 evals 60 <D> [M 1.000E0] 1.831E5 325.36s |7.544E2| {3.686E-3} 4.498E-3 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 57: neg. log cond. likelihood = 182896.76874758114 [62 calls to valueAt]
+Iter 57 evals 61 <D> [M 1.000E0] 1.829E5 331.19s |1.859E3| {9.082E-3} 3.621E-3 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 58: neg. log cond. likelihood = 182381.74654609436 [63 calls to valueAt]
+Iter 58 evals 62 <D> [M 1.000E0] 1.824E5 337.02s |7.547E2| {3.687E-3} 3.487E-3 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 59: neg. log cond. likelihood = 182150.49949343823 [64 calls to valueAt]
+Iter 59 evals 63 <D> [M 1.000E0] 1.822E5 342.85s |1.110E3| {5.421E-3} 2.741E-3 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 60: neg. log cond. likelihood = 181771.6318345807 [65 calls to valueAt]
+Checking model correctness; x size 755101 , ysize 13
+Iter 60 evals 64 <D> [M 1.000E0] 1.818E5 348.69s |9.415E2| {4.600E-3} 2.517E-3 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 61: neg. log cond. likelihood = 181577.62976098334 [66 calls to valueAt]
+Iter 61 evals 65 <D> [M 1.000E0] 1.816E5 355.48s |1.737E3| {8.488E-3} 1.959E-3 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 62: neg. log cond. likelihood = 181194.04397605703 [67 calls to valueAt]
+Iter 62 evals 66 <D> [M 1.000E0] 1.812E5 361.30s |5.582E2| {2.727E-3} 1.938E-3 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 63: neg. log cond. likelihood = 181011.4035624619 [68 calls to valueAt]
+Iter 63 evals 67 <D> [M 1.000E0] 1.810E5 367.19s |6.720E2| {3.283E-3} 1.619E-3 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 64: neg. log cond. likelihood = 180783.1542956565 [69 calls to valueAt]
+Iter 64 evals 68 <D> [M 1.000E0] 1.808E5 373.04s |1.093E3| {5.338E-3} 1.549E-3 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 65: neg. log cond. likelihood = 180616.23367665973 [70 calls to valueAt]
+Iter 65 evals 69 <D> [M 1.000E0] 1.806E5 378.89s |7.642E2| {3.734E-3} 1.381E-3 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 66: neg. log cond. likelihood = 180433.87069626478 [71 calls to valueAt]
+Iter 66 evals 70 <D> [M 1.000E0] 1.804E5 384.40s |5.925E2| {2.895E-3} 1.365E-3 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 67: neg. log cond. likelihood = 180294.18700753385 [72 calls to valueAt]
+Iter 67 evals 71 <D> [M 1.000E0] 1.803E5 390.25s |1.054E3| {5.151E-3} 1.158E-3 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 68: neg. log cond. likelihood = 180129.9945765727 [73 calls to valueAt]
+Iter 68 evals 72 <D> [M 1.000E0] 1.801E5 396.09s |6.044E2| {2.953E-3} 1.122E-3 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 69: neg. log cond. likelihood = 180008.74329226973 [74 calls to valueAt]
+Iter 69 evals 73 <D> [M 1.000E0] 1.800E5 401.93s |9.040E2| {4.417E-3} 9.793E-4 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 70: neg. log cond. likelihood = 179892.78448225497 [75 calls to valueAt]
+Iter 70 evals 74 <D> [M 1.000E0] 1.799E5 407.76s |4.753E2| {2.322E-3} 9.366E-4 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 71: neg. log cond. likelihood = 179832.03302710512 [76 calls to valueAt]
+Iter 71 evals 75 <D> [M 1.000E0] 1.798E5 413.59s |8.987E2| {4.391E-3} 7.574E-4 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 72: neg. log cond. likelihood = 179723.3951219845 [77 calls to valueAt]
+Iter 72 evals 76 <D> [M 1.000E0] 1.797E5 419.19s |4.285E2| {2.093E-3} 7.167E-4 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 73: neg. log cond. likelihood = 179657.99535422644 [78 calls to valueAt]
+Iter 73 evals 77 <D> [M 1.000E0] 1.797E5 425.04s |5.919E2| {2.892E-3} 6.263E-4 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 74: neg. log cond. likelihood = 179582.09864494094 [79 calls to valueAt]
+Iter 74 evals 78 <D> [M 1.000E0] 1.796E5 430.87s |4.565E2| {2.230E-3} 5.759E-4 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 75: neg. log cond. likelihood = 179513.61237334315 [80 calls to valueAt]
+Iter 75 evals 79 <D> [M 1.000E0] 1.795E5 436.71s |5.429E2| {2.653E-3} 5.126E-4 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 76: neg. log cond. likelihood = 179444.877082478 [81 calls to valueAt]
+Iter 76 evals 80 <D> [M 1.000E0] 1.794E5 442.53s |3.115E2| {1.522E-3} 4.733E-4 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 77: neg. log cond. likelihood = 179386.65599760276 [82 calls to valueAt]
+Iter 77 evals 81 <D> [M 1.000E0] 1.794E5 448.37s |4.439E2| {2.169E-3} 4.144E-4 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 78: neg. log cond. likelihood = 179329.7170594708 [83 calls to valueAt]
+Iter 78 evals 82 <D> [M 1.000E0] 1.793E5 454.19s |4.498E2| {2.197E-3} 3.786E-4 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 79: neg. log cond. likelihood = 179286.0180800692 [84 calls to valueAt]
+Iter 79 evals 83 <D> [M 1.000E0] 1.793E5 460.03s |3.474E2| {1.697E-3} 3.384E-4 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 80: neg. log cond. likelihood = 179247.54202486327 [85 calls to valueAt]
+Iter 80 evals 84 <D> [M 1.000E0] 1.792E5 465.88s |3.132E2| {1.530E-3} 3.261E-4 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 81: neg. log cond. likelihood = 179213.82269289333 [86 calls to valueAt]
+Iter 81 evals 85 <D> [M 1.000E0] 1.792E5 471.72s |3.968E2| {1.939E-3} 2.843E-4 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 82: neg. log cond. likelihood = 179187.07792738223 [87 calls to valueAt]
+Iter 82 evals 86 <D> [M 1.000E0] 1.792E5 477.53s |2.939E2| {1.436E-3} 2.628E-4 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 83: neg. log cond. likelihood = 179156.55838308172 [88 calls to valueAt]
+Iter 83 evals 87 <D> [M 1.000E0] 1.792E5 483.36s |2.594E2| {1.268E-3} 2.375E-4 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 84: neg. log cond. likelihood = 179138.5509911901 [89 calls to valueAt]
+Iter 84 evals 88 <D> [M 1.000E0] 1.791E5 489.21s |4.402E2| {2.151E-3} 2.094E-4 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 85: neg. log cond. likelihood = 179112.45980164653 [90 calls to valueAt]
+Iter 85 evals 89 <D> [M 1.000E0] 1.791E5 495.05s |2.109E2| {1.030E-3} 1.856E-4 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 86: neg. log cond. likelihood = 179091.24762962727 [91 calls to valueAt]
+Iter 86 evals 90 <D> [M 1.000E0] 1.791E5 500.88s |2.905E2| {1.419E-3} 1.649E-4 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 87: neg. log cond. likelihood = 179070.60458869816 [92 calls to valueAt]
+Iter 87 evals 91 <D> [M 1.000E0] 1.791E5 506.72s |3.065E2| {1.497E-3} 1.447E-4 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 88: neg. log cond. likelihood = 179053.31536202852 [93 calls to valueAt]
+Iter 88 evals 92 <D> [M 1.000E0] 1.791E5 512.55s |3.239E2| {1.583E-3} 1.300E-4 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 89: neg. log cond. likelihood = 179034.9102530244 [94 calls to valueAt]
+Iter 89 evals 93 <D> [M 1.000E0] 1.790E5 518.71s |1.847E2| {9.023E-4} 1.188E-4 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 90: neg. log cond. likelihood = 179020.49363805266 [95 calls to valueAt]
+Checking model correctness; x size 755101 , ysize 13
+Iter 90 evals 94 <D> [M 1.000E0] 1.790E5 524.65s |1.870E2| {9.137E-4} 1.080E-4 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 91: neg. log cond. likelihood = 179005.9321362559 [96 calls to valueAt]
+Iter 91 evals 95 <D> [M 1.000E0] 1.790E5 531.47s |1.527E2| {7.459E-4} 1.012E-4 - 
+class edu.stanford.nlp.maxent.CGRunner
+Iter. 92: neg. log cond. likelihood = 178990.79764112455 [97 calls to valueAt]
+QNMinimizer terminated due to average improvement: | newest_val - previous_val | / |newestVal| < TOL 
+Total time spent in optimization: 537.43s
+After optimization neg (penalized) log cond likelihood: 178990.80
+Non-zero parameters: 144046/144046 (100.00%)
+Checking model correctness; x size 755101 , ysize 13
+Model is correct [empirical expec = model expec]
+Saving dictionary of 47403 words ...
+Extractors list:
+Extractors[Extractor(-1,word), Extractor(0,word), Extractor(1,word), ExtractorFrames$ExtractorContinuousTagConjunction(-2,tag), Extractor(-1,tag)]
+rareExtractors[]
+Training POS tagger done [615.3 sec].
+java -mx1g -classpath stanford-postagger.jar  -props   582.30s user 30.92s system 99% cpu 10:17.58 total
